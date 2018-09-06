@@ -11,7 +11,7 @@ $ go run app.go
 打开浏览器输入：http://hostname:10991/
 
 - 如图所示打开上传图片
-![网页效果](http://47.88.49.197:10991/static/images/6a3e027ab089be2e193c670b6598840a)
+![网页效果](http://47.88.49.197:10991/static/images/e74303118530ac460e883f3217c2276a)
 
 - 预览图片
 ![网页效果](http://47.88.49.197:10991/static/images/9381ef6c634168838405d8c31128a20a)
@@ -22,5 +22,45 @@ $ go run app.go
 - 下载图片功能
 - 在线预览图片
 
+# API
+
+### 图片上传
+    - URI POST / 
+    - REQUEST (multipart/form-data)
+        + BODY
+        
+        ```
+            fileUpload (file, required)
+        ```
+
+    - RESPONSE (application/json)
+        + BODY
+        
+        ```
+            {
+                "code": "number",
+                "msg": "string",
+                "data": "string"
+            }
+        ```
+
+### 图片预览
+    - URI GET /static/images/:name 
+    - REQUEST 
+        + Params
+        ```
+            name (string, required) - image file name
+        ```
+
+    - RESPONSE (image/***)
+
 ## LICENSE
 MIT
+
+## TODO List
+
+- 图片压缩
+- 图片缩略图
+- 图片管理
+- 用户认证OAuth2.0
+- 配置化服务
