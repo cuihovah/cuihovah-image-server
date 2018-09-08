@@ -11,10 +11,13 @@ $ go run app.go
 打开浏览器输入：http://hostname:10991/
 
 - 如图所示打开上传图片
-![网页效果](http://47.88.49.197:10991/static/images/e74303118530ac460e883f3217c2276a)
+![网页效果](http://47.88.49.197:10991/static/images/d3c4e771a49d5637d8163817db843d68)
 
 - 预览图片
 ![网页效果](http://47.88.49.197:10991/static/images/9381ef6c634168838405d8c31128a20a)
+
+- 缩略图预览
+![网页效果](http://47.88.49.197:10991/static/images/9381ef6c634168838405d8c31128a20a?quality=low)
 
 ## Feature
 
