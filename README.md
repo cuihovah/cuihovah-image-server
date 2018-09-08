@@ -21,46 +21,52 @@ $ go run app.go
 - 上传图片功能
 - 下载图片功能
 - 在线预览图片
+- 图片压缩
+- 图片缩略图
 
 # API
 
 ### 图片上传
-    - URI POST / 
-    - REQUEST (multipart/form-data)
-        + BODY
-        
-        ```
-            fileUpload (file, required)
-        ```
+- URI POST / 
+- REQUEST (multipart/form-data)
+    + BODY
+    
+    ```
+        fileUpload (file, required)
+    ```
 
-    - RESPONSE (application/json)
-        + BODY
-        
-        ```
-            {
-                "code": "number",
-                "msg": "string",
-                "data": "string"
-            }
-        ```
+- RESPONSE (application/json)
+    + BODY
+    
+    ```
+        {
+            "code": "number",
+            "msg": "string",
+            "data": "string"
+        }
+    ```
 
 ### 图片预览
-    - URI GET /static/images/:name 
-    - REQUEST 
-        + Params
-        ```
-            name (string, required) - image file name
-        ```
+- URI GET /static/images/:name 
+- REQUEST
+    + Query
+    ```
+        quality (string) - low, middle, high
+    ```
 
-    - RESPONSE (image/***)
+    + Params
+    ```
+        name (string, required) - image file name
+    ```
+
+- RESPONSE (image/***)
 
 ## LICENSE
-MIT
+Copyright (c) 2018 cuihovah MIT License
 
 ## TODO List
 
-- 图片压缩
-- 图片缩略图
 - 图片管理
 - 用户认证OAuth2.0
 - 配置化服务
+- 防盗链
